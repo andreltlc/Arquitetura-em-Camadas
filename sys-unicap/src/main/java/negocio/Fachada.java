@@ -15,17 +15,21 @@ public class Fachada implements IFachada{
   }
 
   @Override
-  public void alterarAluno(Aluno aluno) {
-
+  public void alterarNome(Aluno aluno, String nome) {
+    this.controladorAluno.alterarNome(aluno, nome);
+  }
+  public void alterarMatricula(Aluno aluno, String matricula) {
+    this.controladorAluno.alterarMatricula(aluno, matricula);
+  }
+  public void alterarEndereco ( Aluno aluno, Endereco endereco){
+    this.controladorAluno.alterarEndereco(aluno, endereco);
   }
 
   @Override
-  public void removerAluno(String matricula) {
-
+  public void removerAluno(Aluno aluno) {
+    this.controladorAluno.removerAluno(aluno);
   }
-
-  @Override
-  public Aluno buscarAluno(String matricula) {
-    return null;
+  public Aluno buscaAluno(String nome){
+    return  a = this.controladorAluno.buscaAluno(nome);
   }
 }
